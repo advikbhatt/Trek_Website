@@ -1,0 +1,234 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  
+}
+
+.contact-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+body.menu-active .contact-container {
+  transform: scale(0.9);
+}
+
+.contact-container .contact-inner {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contact-navi {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding: 0 25px;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.contact-navi a {
+  display: inline-block;
+  height: 75px;
+  line-height: 75px;
+  font-size: 30px;
+  padding: 0 25px;
+  color: #212121;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  
+  transition: all 0.32s ease;
+}
+
+body:not(.menu-active) .contact-navi a.contact-menu-activator:hover {
+  transform: rotate(90deg);
+}
+
+body.menu-active .contact-navi a.contact-menu-activator {
+  transform: rotate(90deg);
+}
+
+.contact-navi a.white {
+  color: #FAFAFA;
+}
+
+body.menu-active .contact-navi a.white {
+  color: #212121;
+  transition: all 0.15s ease;
+}
+
+.contact-navi a.contact-link {
+  float: right;
+  position: relative;
+  text-align: center;
+}
+
+.contact-navi a.contact-link i {
+  position: absolute;
+  display: block;
+  transform: translateX(-50%);
+  
+  transition: all 0.32s ease;
+}
+
+.contact-navi a.contact-link i.contact-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-navi a.contact-link:hover i {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-navi a.contact-link:hover i.contact-hidden {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact-navi i.ion-cube {
+  display: inline-block;
+  position: absolute;
+  height: 75px;
+  line-height: 75px;
+  font-size: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-container .contact-inner .contact-panel {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  width: 60%;
+  float: left;
+  transform: skew(-20deg);
+}
+
+.contact-container .contact-inner .contact-panel.contact-panel-left {
+  margin-left: -10%;
+}
+
+.contact-container .contact-inner .contact-panel .contact-panel-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) skew(20deg);
+}
+
+.contact-container .contact-inner .contact-panel.contact-panel-left .contact-panel-content .contact-image-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  opacity: 0.95;
+  background-image: url('../assets/img/logo.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.contact-container .contact-inner .contact-panel.contact-panel-right {
+  margin-right: -10%;
+  background: #1B1B1B;
+}
+
+.contact-container .contact-inner .contact-panel.contact-panel-right .contact-panel-content .contact-form {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 300px;
+  min-height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-25%);
+}
+
+.contact-container .contact-inner .contact-panel.contact-panel-right .contact-panel-content .contact-form h1 {
+  display: block;
+  margin: 0 0 45px 0;
+  color: #B1B1B1;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.contact-group { 
+  position: relative; 
+  margin-bottom: 25px; 
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  color: white;
+  background: transparent;
+}
+
+input:focus { outline: none; }
+
+.contact-highlight {
+  position: absolute;
+  height: 60%; 
+  width: 100px; 
+  top: 25%; 
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.contact-group input:focus ~ .contact-highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+.contact-send-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: none;
+  border: 1px solid #B1B1B1;
+  color: #B1B1B1;
+  text-decoration: none;
+  font-weight: 200;
+  
+  transition: all 0.32s ease;
+}
+
+.contact-send-btn:hover {
+  border-color: white;
+  color: white;
+}
+
+@-webkit-keyframes inputHighlighter {
+  from { background: #B1B1B1; }
+  to    { width: 0; background: transparent; }
+}

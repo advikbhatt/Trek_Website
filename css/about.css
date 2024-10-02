@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
+
+/* Base styles */
+:root {
+    --header-height: 3.5rem;
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+    --primary-color: #0a9cf7;
+    --dark-color: #1e1e1e;
+    --body-font: "Montserrat Alternates", sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: 0.938rem;
+    --font-regular: 400;
+    --font-medium: 500;
+    --z-fixed: 100;
+    --section-padding: 2rem 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--white-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    z-index: var(--z-fixed);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Changed class from .about-us to .about-section */
+.about-section {
+    margin-top: 80px;
+    padding: var(--section-padding);
+    text-align: center;
+}
+
+.about-section h1, .about-section h2 {
+    color: var(--black-color);
+}
+
+.about-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+.about-section p, .about-section ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--black-color);
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.title {
+    font-size: 2em;
+    color: var(--primary-color);
+    display: block;
+}
+
+.sub-title {
+    font-size: 0.8em;
+    color: gray;
+    display: block;
+}
+
+.btn1, .btn2 {
+    padding: 10px 20px;
+    border-radius: 3px;
+    outline: none;
+    transition: 0.5s;
+    margin-top: 1rem;
+}
+
+.btn1 {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn1:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn2 {
+    background: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    color: var(--white-color);
+}
+
+.btn2:hover {
+    background: transparent;
+    color: var(--dark-color);
+}
+
+.section2, .section3 {
+    width: 90%;
+    margin: 5% auto;
+}
+
+.section2 table, .section3 table {
+    width: 100%;
+}
+
+.section2 table td, .section3 table td {
+    width: 50%;
+    padding: 1rem;
+}
+
+.section2 table td img, .section3 table td img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
+}
+
+.section3 table td img {
+    float: right;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 1024px) {
+    .about-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p, .about-section ul li {
+        font-size: 0.875rem;
+    }
+
+    .about-section {
+        padding-top: calc(var(--header-height) + 1.5rem);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+    .section2 table td, .section3 table td {
+        width: 100%;
+        display: block;
+    }
+
+    .section3 table td img {
+        float: none;
+        margin-top: 4%;
+    }
+
+    .section2 table td img, .section3 table td img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    .section2, .section3 {
+        font-size: 12px;
+    }
+
+    .section3 table td img {
+        margin-top: 8%;
+    }
+
+    .btn1, .btn2 {
+        padding: 5px 10px;
+    }
+}
