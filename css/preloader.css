@@ -1,0 +1,97 @@
+/* Preloader styling */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white; /* White background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    transition: opacity 1s ease;
+}
+
+.loader .main-text{
+    color: black;
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.loader .sub-text {
+
+}
+
+/* "HIMALAYAS" appears first, fades out */
+.loader .main-text {
+    animation: fadeIn 2s ease forwards, fadeOut 1s ease 2s forwards; /* Fades in and out */
+}
+
+/* "The Expedition" appears after "HIMALAYAS", then fades out */
+.loader .sub-text {
+    font-size: 5vw; /* Smaller size for sub-text */
+    font-weight: lighter;
+    opacity: 0;
+    animation: fadeIn 2s ease 3s forwards, fadeOut 1s ease 5s forwards; /* Appears after HIMALAYAS */
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Sliding effect for the main content */
+.main-content {
+    opacity: 0;
+    transform: translateY(100px); /* Start slightly below the viewport */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+.main-content.active {
+    opacity: 1;
+    transform: translateY(0); /* Slide into view */
+}
+
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .loader .main-text {
+        font-size: 5vw;
+    }
+
+    .loader .sub-text {
+        font-size: 5vw;
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .loader .main-text {
+        font-size: 3vw;
+    }
+
+    .loader .sub-text {
+        font-size: 3vw;
+    }
+}
+
+/* Larger desktops */
+@media (min-width: 1025px) {
+    .loader .main-text {
+        font-size: 1vw;
+    }
+
+    .loader .sub-text {
+        font-size: 1vw;
+    }
+}

@@ -196,7 +196,7 @@ input {
   width: 300px;
   border: none;
   border-bottom: 1px solid #757575;
-  color: white;
+  color: rgb(0, 0, 0);
   background: transparent;
 }
 
