@@ -13,6 +13,12 @@ body {
   font-weight: 300;
   
 }
+.message h1{
+  display: block;
+  margin-top: 30vh;
+  padding: 10vw;
+  text-align: center;
+}
 
 .contact-container {
   width: 100%;
@@ -147,7 +153,7 @@ body.menu-active .contact-navi a.white {
   left: 50%;
   top: 50%;
   opacity: 0.95;
-  background-image: url('../assets/img/logo.jpg');
+  background-image: url('../assets/img/logo.png');
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -156,7 +162,7 @@ body.menu-active .contact-navi a.white {
 
 .contact-container .contact-inner .contact-panel.contact-panel-right {
   margin-right: -10%;
-  background: #1B1B1B;
+  background: #edf6f7;
 }
 
 .contact-container .contact-inner .contact-panel.contact-panel-right .contact-panel-content .contact-form {
@@ -173,8 +179,8 @@ body.menu-active .contact-navi a.white {
 .contact-container .contact-inner .contact-panel.contact-panel-right .contact-panel-content .contact-form h1 {
   display: block;
   margin: 0 0 45px 0;
-  color: #B1B1B1;
-  font-weight: 200;
+  color: #000000;
+  font-weight: 900;
   font-size: 18px;
 }
 

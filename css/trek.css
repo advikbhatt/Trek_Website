@@ -6,11 +6,17 @@
     flex-wrap: wrap;
     padding: 10px;
     position: relative;
-    top: 15vh;
+    top: 1vh;
     margin-bottom: 100px; 
 
 }
 
+.trek-season{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 80px;
+}
 .card-hover {
     border: 2px solid lightgray;
     flex-basis: 32%; 
